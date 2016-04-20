@@ -2,10 +2,11 @@
 
 FROM ubuntu:14.04
 MAINTAINER Nate Doyle
-RUN apt-get install python3
-RUN apt-get install python3-pip
-RUN pip3 install selenium
-RUN pip3 install flask
+RUN apt-get -yqq update
+RUN apt-get install -yqq python 
+RUN apt-get -yqq install python-pip
+RUN pip install selenium
+RUN pip install flask
 
 COPY . /src
 
